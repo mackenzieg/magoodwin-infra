@@ -1,0 +1,12 @@
+[Unit]
+Description=LCD Display service
+
+[Service]
+ExecStart=/home/magoodwin/dev/magoodwin-infra/lcd-display/C/display
+Restart=always
+SyslogIdentifier=controller
+User=root
+Group=root
+
+TimeoutStopSec=30
+
