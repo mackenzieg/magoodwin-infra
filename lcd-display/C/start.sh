@@ -8,4 +8,5 @@ sudo rm /usr/lib/systemd/system/$SERVICE_FILE
 sudo cp $SERVICE_FILE /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl reset-failed
+sudo systemctl enable $SERVICE_FILE
 sudo systemctl start $SERVICE_FILE
