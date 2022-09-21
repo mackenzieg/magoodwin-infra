@@ -30,6 +30,7 @@ int main(void)
         {
           symbol=0;
         }
+	FirstGetIpAddress();                        //Update IP Address
     }
     return 0;
 }

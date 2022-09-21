@@ -1,12 +1,14 @@
 [Unit]
 Description=LCD Display service
+Requires=network-online.target dev-i2c\x2d1.device
+After=network-online.target dev-i2c\x2d1.device
 
 [Service]
 ExecStart=/home/magoodwin/dev/magoodwin-infra/lcd-display/C/display
-Restart=always
-SyslogIdentifier=controller
 User=root
 Group=root
+Restart=always
+RestartSec=5s
 
-TimeoutStopSec=30
-
+[Install]
+WantedBy=multi-user.target

@@ -19,6 +19,7 @@
 
 
 char IPSource[20]={0};
+char Hostname[20]={0};
 int i2cd;
 
 // Init SSD1306
@@ -425,6 +426,12 @@ void LCD_Display(unsigned char symbol)
 void FirstGetIpAddress(void)
 {
   strcpy(IPSource,GetIpAddress());     
+}
+
+void GetHostName(void)
+{
+    memset(Hostname, 0, 150);
+    gethostname(Hostname, 150);
 }
 
 char* GetIpAddress(void)
